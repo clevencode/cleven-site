@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Inclua o CSS completo aqui (ou referencie style.css externo) */
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Meu Portfólio</div>
+      <div class="hamburger" onclick="toggleMenu()">
+        &#9776;
+      </div>
+      <div class="nav-links">
+        <a href="#home" class="nav-link">Início</a>
+        <a href="#sobre" class="nav-link">Sobre</a>
+        <a href="#habilidades" class="nav-link">Habilidades</a>
+        <a href="#projetos" class="nav-link">Projetos</a>
+        <a href="#contato" class="nav-link">Contato</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Menu lateral para mobile -->
+  <div id="sideMenu" class="side-menu">
+    <a href="#home" class="side-link">Início</a>
+    <a href="#sobre" class="side-link">Sobre</a>
+    <a href="#habilidades" class="side-link">Habilidades</a>
+    <a href="#projetos" class="side-link">Projetos</a>
+    <a href="#contato" class="side-link">Contato</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Olá, sou Desenvolvedor Web</h1>
+        <p>Crio experiências digitais modernas, intuitivas e responsivas.</p>
+        <a href="#contato" class="hero-btn">Fale comigo</a>
+      </div>
+      <div class="hero-image">
+        <img src="imagens/perfil.jpg" alt="Minha Foto" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="section alt">
+    <div class="section-container sobre-content">
+      <h2 class="section-title">Sobre Mim</h2>
+      <p>Sou apaixonado por tecnologia e desenvolvimento de soluções web. Trabalho com design moderno, responsividade e acessibilidade.</p>
+    </div>
+  </section>
+
+  <!-- Habilidades -->
+  <section id="habilidades" class="skills-section">
+    <h2 class="skills-title">Habilidades</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <img src="imagens/html.png" alt="HTML" />
+        <p>HTML</p>
+      </div>
+      <div class="skill-card">
+        <img src="imagens/css.png" alt="CSS" />
+        <p>CSS</p>
+      </div>
+      <div class="skill-card">
+        <img src="imagens/js.png" alt="JavaScript" />
+        <p>JavaScript</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="section">
+    <div class="section-container">
+      <h2 class="section-title">Projetos</h2>
+      <div class="project-container">
+        <div class="project-card">
+          <img src="imagens/projeto1.jpg" alt="Projeto 1" class="project-image" />
+          <div class="project-content">
+            <h3 class="project-title">Projeto 1</h3>
+            <p class="project-description">Descrição do projeto com tecnologias utilizadas.</p>
+            <a href="#" class="github-button">Ver no GitHub</a>
+          </div>
+        </div>
+        <!-- Outros projetos aqui -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="section alt">
+    <div class="section-container">
+      <h2 class="section-title">Contato</h2>
+      <p>Você pode me encontrar no LinkedIn, GitHub ou enviar um e-mail diretamente.</p>
+      <a href="mailto:seuemail@email.com" class="contact-btn">Enviar Email</a>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer class="footer">
+    &copy; 2025 Meu Nome. Todos os direitos reservados.
+  </footer>
+
