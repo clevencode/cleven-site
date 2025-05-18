@@ -233,36 +233,6 @@ body {
   margin-bottom: 0.6rem;
 }
 
-/* ------------------------------------- */
-/* SEÇÃO SOBRE MIM */
-/* ------------------------------------- */
-.sobre-content p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1.5rem;
-  text-align: justify;
-  color: #333;
-}
-
-/* ------------------------------------- */
-/* BOTÃO DE CONTATO */
-/* ------------------------------------- */
-.contact-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  background-color: #6f00ff;
-  color: white;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: 13px;
-  transition: background-color 0.3s ease;
-}
-
-.contact-btn:hover {
-  background-color: #4e00b3;
-}
-
 
 /* ------------------------------------- */
 /* BOTÃO DE CONTATO */
