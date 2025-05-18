@@ -32,21 +32,3 @@ document.querySelectorAll('.nav-link').forEach(link => {
 
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // evita valores negativos
   });
-
-   const botao = document.getElementById('toggle-btn');
-  const breve = document.getElementById('texto-breve');
-  const completo = document.getElementById('texto-completo');
-
-  botao.addEventListener('click', () => {
-    const mostrandoBreve = breve.style.display !== 'none';
-
-    if (mostrandoBreve) {
-      breve.style.display = 'none';
-      completo.style.display = 'block';
-      botao.textContent = '-';
-    } else {
-      completo.style.display = 'none';
-      breve.style.display = 'block';
-      botao.textContent = 'Mais sobre mim';
-    }
-  });
