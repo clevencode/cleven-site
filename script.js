@@ -38,29 +38,5 @@ if (navbar) {
   });
 }
 
-// -------------------------------
-// Botão "Mais sobre mim"
-// -------------------------------
-const botao = document.getElementById('toggle-btn');
-const breve = document.getElementById('texto-breve');
-const completo = document.getElementById('texto-completo');
-
-if (botao && breve && completo) {
-  botao.addEventListener('click', () => {
-    const mostrandoBreve = breve.style.display !== 'none';
-
-    if (mostrandoBreve) {
-      breve.style.display = 'none';
-      completo.style.display = 'block';
-      botao.textContent = '-';
-    } else {
-      completo.style.display = 'none';
-      breve.style.display = 'block';
-      botao.textContent = 'Mais sobre mim';
-    }
-  });
-}
-
-
 
 
