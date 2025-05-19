@@ -17,22 +17,6 @@ body {
   line-height: 1.6;
 }
 
-/* Esconde visualmente a scrollbar, mas mantém rolagem funcional */
-body {
-  overflow: auto;
-  scrollbar-width: none; /* Firefox */
-}
-
-
-.scroll-area {
-  overflow-y: scroll;
-  scrollbar-width: none;
-}
-
-.scroll-area::-webkit-scrollbar {
-  display: none;
-}
-
 
 
 /* ------------------------------------- */
