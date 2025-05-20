@@ -6,11 +6,12 @@
 }
 
 body {
-  font-family: system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   background: #000;
   color: #fff;
   line-height: 1.6;
 }
+
 
 h1 {
   text-align: center;
@@ -78,11 +79,10 @@ h1 {
 
 /* HERO */
 .hero {
-  background: #0e0e0e;
+  background: #000000;
   padding: 4rem 2rem;
   display: flex;
   justify-content: center;
-  color: inherit;
 }
 
 .hero-content {
@@ -101,8 +101,8 @@ h1 {
 }
 
 .hero-text h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 790;
   margin-bottom: 1rem;
   text-align: left;
 }
@@ -115,14 +115,9 @@ h1 {
 .hero-image img {
   width: 100%;
   max-width: 320px;
-  border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-  object-fit: cover;
+  border-radius: 10%;
+  border: 5px solid #6f00ff;
 }
-
-
-
-
 
 
 /* SOBRE MIM */
