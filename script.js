@@ -53,3 +53,16 @@ if (navbar) {
     });
   });
 
+const toggleBtn = document.getElementById("toggleTabsBtn");
+  const toggleIcon = document.getElementById("toggleIcon");
+  const tabsContainer = document.querySelector(".tabs-container");
+
+  // Começa escondido
+  tabsContainer.style.display = "none";
+
+  toggleBtn.addEventListener("click", () => {
+    const isVisible = tabsContainer.style.display === "block";
+    
+    tabsContainer.style.display = isVisible ? "none" : "block";
+    toggleIcon.textContent = isVisible ? "＋" : "－";
+  });

@@ -10,60 +10,78 @@
 
 </head>
 <body>
-
-  <!-- ===================== Navbar ===================== -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-links">
-        <a href="#home" class="nav-link">HOME</a>
-        <a href="#sobre" class="nav-link">EU</a>
-        <a href="#contato"
-        class="nav-link">CONTATO</a>
-      </div>
-    </div>
-  </nav>
-
   <!-- ===================== Seção Home ===================== -->
-  <header id="home" class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>SOU, CLEVENIDER PETIT</h1>
-        <p>Prazer em te conhecer, a nossa jornada está apenas começando, segue me para ver onde está aventura está nós levando</p>
-      </div>
-      <div class="hero-image">
-        <img src="imagens/dd.jpeg" alt="minha foto de perfil" />
-      </div>
+  <section class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <h1>SOU, CLEVENIDER PETIT</h1>
+      <p>Estudante de análise e desenvolvimento de software, com foco em se tornar um <strong>front-end devloper</strong> no futuro </p>
     </div>
-  </header>
+  </div>
+</section>
 
 <!-- ===================== Seção Sobre ===================== -->
+<!-- Toggle Tabs Section -->
+<div class="tabs-toggle">
+  <hr class="toggle-line" />
+  <button id="toggleTabsBtn">
+    <span id="toggleIcon">+</span>
+  </button>
+</div>
+
+
 <div class="tabs-container">
   <div class="tabs">
-    <button class="tab active" data-tab="eu">EU</button>
-    <button class="tab" data-tab="outro1">NÃO</button>
-    <button class="tab" data-tab="outro2">SEI</button>
-    <button class="tab" data-tab="outro3">NADA</button>
+    <button class="tab active" data-tab="home">Home</button>
+    <button class="tab" data-tab="about">Sobre</button>
+    <button class="tab" data-tab="projects">Projetos</button>
+    <button class="tab" data-tab="contact">Contato</button>
+     <button class="tab" data-tab="social">Social</button>
   </div>
 
-  <div class="tab-content active" id="eu">
-    <p></p>
+  <div class="tab-content active" id="home">
+    <p> <strong>Prazer em te conhecer,</strong> aqui você poderá encontrar um pouco de Informações sobre mim, minhas experiências e habilidades.</p>
   </div>
-  <div class="tab-content" id="outro1">
-    <p>Conteúdo do Outro 1.</p>
+  
+  <div class="tab-content" id="about">
+    <p>Atualmente estou cursando análise e desenvolvimento de sistemas na descomplica digital, tem sido uma experiência incrível, e estou muito feliz com o que estou aprendendo.</p>
   </div>
-  <div class="tab-content" id="outro2">
-    <p>Conteúdo do Outro 2.</p>
+  
+  <div class="tab-content" id="projects">
+    <p>Ainda não tenho projetos extensos e complexos ainda, mas este site que você está navegando é um fração das ideias que tenho na cabeça, desde o dia que me deparei com este curso, tem surgido tantas ideias na minha cabeça, mas me falta conhecimento para torna-las realidade, por isso vou continuar estando e aprendendo a cada dia.</p>
   </div>
-  <div class="tab-content" id="outro3">
-    <p>Conteúdo do Outro 3.</p>
+
+  <div class="tab-content" id="contact">
+    <p>Entre em contato geralmente nos sábados, pois é o fim de semana que estou mais disponível</p>
+    <div class="common-contact">
+      <a href="mailto:clevypetit@gmail.com" class="btn">Enviar Mensagem</a>
+    </div>
+  </div>
+  
+  <div class="tab-content" id="social">
+    <p>Se você quiser saber um pouco mais sobre mim nas redes, aproveite clicando nos links abaixo.</p>
+    <ul class="social-links">
+      <li>
+        <a href="https://github.com/Clevencode" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+      </li>
+      <li>
+        <a href="https://x.com/clevencode" target="_blank">
+          <i class="fab fa-x-twitter"></i> X
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/clevenider-petit-31a77a282/" target="_blank">
+          <i class="fab fa-linkedin-in"></i> LinkedIn
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
-<!-- ===================== Seção Aprendizado ===================== -->
 
-  <!-- ===================== Rodapé ===================== -->
-  <footer class="footer">
-    <p>&copy; 2025 Clevenider Petit. Todos os direitos reservados.</p>
-  </footer>
+
+  
 
 </body>
 </html>
