@@ -31,7 +31,7 @@ h1 {
   text-align: center;
   color: #fff;
   background: linear-gradient(180deg, #ffffff00 0%, #000000cc 90%),
-              url('imagens/e.png') no-repeat center center / cover;
+              url('public/e.png') no-repeat center center / cover;
 }
 
 .hero-content {
@@ -82,7 +82,7 @@ h1 {
 }
 
 .common-contact .btn:hover {
-  background: #8f00ff;
+  background: #6f00ff;
 }
 
 /* Redes sociais - alinhadas à direita e com espaçamento */
