@@ -9,9 +9,15 @@ body {
   font-family: 'Inter', system-ui, sans-serif;
   background: #000;
   color: #fff;
-  line-height: 1.7;
   font-size: 16px;
+  line-height: 1.7;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 h1 {
@@ -22,47 +28,44 @@ h1 {
 
 /* ============== HERO ============== */
 .hero {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 6rem 2rem 3rem;
-  text-align: center;
-  color: #fff;
+  padding: 4rem 1.5rem 2rem;
   background: linear-gradient(180deg, #ffffff00 0%, #000000cc 90%),
-              url('public/e.png') no-repeat center center / cover;
+              url('https://cleven.notion.site/image/attachment%3A9474ccdf-265b-45b0-86be-99f627d94233%3Ae.png?table=block&id=1fb03af9-2e96-80a8-b5c4-f0cffc10b969&spaceId=8c5d2969-d632-4e91-b6ab-e3b0c46cfe31&width=1420&userId=&cache=v2') no-repeat center center / cover;
+  text-align: center;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: 1.5rem;
   width: 100%;
-  max-width: 1200px;
+  max-width: 800px;
 }
 
 .hero-text h1 {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  text-align: left;
   line-height: 1.2;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #efefef;
-  text-align: left;
   max-width: 600px;
   line-height: 1.6;
 }
 
-/* Botão de e-mail */
+/* ============== BOTÃO E-MAIL ============== */
 .common-contact {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 1.5rem;
+  justify-content: center;
+  margin-top: 1.2rem;
 }
 
 .common-contact .btn {
@@ -71,84 +74,61 @@ h1 {
   justify-content: center;
   background: transparent;
   color: #fff;
-  padding: 0.3rem 0.8rem;
+  padding: 0.4rem 1rem;
   border-radius: 30px;
   border: 2px solid #464646cc;
   font-weight: 600;
   font-size: 1rem;
-  margin: auto;
-  transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .common-contact .btn:hover {
-  background: linear-gradient(to top, #ffffff, #d8d8d8);
-  color: #000000;
+   background: linear-gradient(to right, #ffffff, #6c2dff);
+  color: #000;
   transform: scale(1.05);
+  border-color: #ffffff;
 }
 
-/* Redes sociais - alinhadas à direita e com espaçamento */
-/* Estilos base: Mobile First */
+/* ============== SOCIAL LINKS ============== */
 .social-links {
   display: flex;
-  flex-direction: column; /* melhor empilhamento para mobile */
+  flex-direction: column;
   align-items: center;
   gap: 0.75rem;
   list-style: none;
-  padding: 1rem 0;
-  margin: 0;
+  margin: 2rem 0;
 }
 
 .social-links li a {
   display: inline-flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  background: transparent;
+  align-items: center;
+  justify-content: center;
   color: #fff;
-  padding: 0.3rem 0.8rem;
+  padding: 0.4rem 1rem;
   border-radius: 30px;
+  border: 2px solid #464646cc;
   font-weight: 600;
   font-size: 1rem;
-  border: 2px solid #464646cc;
-  transition: background 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
   text-decoration: none;
 }
 
 .social-links li a:hover {
-  background: linear-gradient(to top, #ffffff, #d8d8d8);
-  color: #000000;
+  background: linear-gradient(to right, #ffffff, #6c2dff);
+  color: #000;
   transform: scale(1.05);
-}
-
-/* Estilos para tablets e desktops */
-@media (min-width: 600px) {
-  .social-links {
-    flex-direction: row;
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .social-links li a {
-    padding: 0.3rem 0.8rem;
-    font-size: 0.95rem;
-  }
-
-  .social-links li a:hover {
-    transform: scale(1.2);
-  }
+  border-color: #ffffff;
 }
 
 /* ============== TABS ============== */
 .tabs-container {
-  position: relative;
-  margin: 2rem auto;
-  margin-top: 4rem;
-  max-width: 100%;
-  width: 90%;
+  margin: 3rem auto;
   padding: 1.5rem;
-  background: #00000082;  /* Glassmorphism effect */
+  width: 90%;
+  max-width: 800px;
+  background: #00000082;
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
   border: 1.8px solid #ffffff4d;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -167,17 +147,16 @@ h1 {
 }
 
 .tab {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: #aaa;
   background: transparent;
-  border: 2px solid transparent; /* borda transparente para manter o layout */
+  border: none;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 1rem;
   white-space: nowrap;
-  transition: all 0.3s ease;
   opacity: 0.8;
-  border-radius: 0;
+  transition: all 0.3s ease;
 }
 
 .tab:hover {
@@ -186,7 +165,7 @@ h1 {
 
 .tab.active {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   opacity: 1;
   position: relative;
 }
@@ -198,7 +177,7 @@ h1 {
   left: 0;
   right: 0;
   height: 3px;
-  background-color: #fff;
+  background-color: #6c2dff;
   border-radius: 2px;
 }
 
@@ -206,8 +185,8 @@ h1 {
   display: none;
   margin-top: 1.5rem;
   font-size: 1rem;
-  line-height: 1.8;
   color: #efefef;
+  line-height: 1.8;
 }
 
 .tab-content.active {
@@ -215,37 +194,12 @@ h1 {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Desktop adjustments */
-@media (min-width: 768px) {
-  .tabs-container {
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 800px;
-    width: 90%;
-    padding: 2rem;
-  }
-  
-  .tabs {
-    gap: 1rem;
-  }
-  
-  .tab {
-    font-size: 1.6rem;
-  }
-  
-  .tab.active {
-    font-size: 1.7rem;
-  }
-}
-
-/* ============== TABS TOGGLE ============== */
+/* ============== TOGGLE LINE ============== */
 .tabs-toggle {
   position: relative;
-  max-width: 800px;
+  max-width: auto;
   width: 100%;
-  margin: 3rem auto 2rem;
+  margin: -1.1rem auto 2rem;
   height: 2.5rem;
 }
 
@@ -254,7 +208,7 @@ h1 {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 2px;
+  height: 3px;
   background: #ffffff33;
   border: none;
   transform: translateY(-50%);
@@ -274,16 +228,64 @@ h1 {
   width: 2.5rem;
   height: 2.5rem;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 #toggleTabsBtn:hover {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: #1a1a1a;
-  border-color: #ffffff88;
+   background: linear-gradient(to right, #ffffff, #6c2dff);
+  color: #000;
+  border-color: #ffffff;
+}
 
-  #toggleTabsBtn:hover {
-  transform: translate(-50%, -50%) scale(1.1);
-  background: #1a1a1a;
-  border-color: #ffffff88;
+/* ============== MEDIA QUERIES ============== */
+@media (min-width: 600px) {
+  .social-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .social-links li a {
+    font-size: 0.95rem;
+  }
+
+  .social-links li a:hover {
+    transform: scale(1.2);
+  }
+
+  .hero-text h1 {
+    font-size: 2.6rem;
+  }
+
+  .hero-text p {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .tabs-container {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2rem;
+  }
+
+  .tabs {
+    gap: 1rem;
+  }
+
+  .tab {
+    font-size: 1.6rem;
+  }
+
+  .tab.active {
+    font-size: 1.7rem;
+  }
+}
+
+/* ============== OUTROS ESTILOS ============== */
+a{
+  color: #6c2dff;
+  font-weight: 700;
 }
