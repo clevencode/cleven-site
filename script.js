@@ -17,54 +17,46 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 // -------------------------------
-// Navbar: esconde ou mostra a navbar
-// -------------------------------
-let lastScrollTop = 0;
-const navbar = document.querySelector('.navbar');
-
-if (navbar) {
-  window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (currentScroll > lastScrollTop) {
-      // Rolando para baixo: esconde a navbar
-      navbar.classList.add('hide');
-    } else {
-      // Rolando para cima: mostra a navbar
-      navbar.classList.remove('hide');
-    }
-
-    lastScrollTop = Math.max(0, currentScroll);
-  });
-}
-// -------------------------------
 // Tabs: mostra o conteúdo correspondente
 // -------------------------------
-  const tabs = document.querySelectorAll('.tab');
-  const contents = document.querySelectorAll('.tab-content');
+const tabs = document.querySelectorAll('.tab');
+const contents = document.querySelectorAll('.tab-content');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      contents.forEach(c => c.classList.remove('active'));
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    tabs.forEach(t => t.classList.remove('active'));
+    contents.forEach(c => c.classList.remove('active'));
 
-      tab.classList.add('active');
-      document.getElementById(tab.dataset.tab).classList.add('active');
-    });
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.tab).classList.add('active');
   });
+});
 
 const toggleBtn = document.getElementById("toggleTabsBtn");
-  const toggleIcon = document.getElementById("toggleIcon");
-  const tabsContainer = document.querySelector(".tabs-container");
+const toggleIcon = document.getElementById("toggleIcon");
+const tabsContainer = document.querySelector(".tabs-container");
 
-  // Começa escondido
-  tabsContainer.style.display = "none";
+// Começa escondido
+tabsContainer.style.display = "none";
+let firstClick = true;
 
-  toggleBtn.addEventListener("click", () => {
-    const isVisible = tabsContainer.style.display === "block";
-    
-    tabsContainer.style.display = isVisible ? "none" : "block";
-    toggleIcon.textContent = isVisible ? "＋" : "－";
-  });
+toggleBtn.addEventListener("click", () => {
+  const isVisible = tabsContainer.style.display === "block";
+  
+  // Toggle display and icon
+  tabsContainer.style.display = isVisible ? "none" : "block";
+  toggleIcon.textContent = isVisible ? "＋" : "－";
+  
+  // Scroll automatic ao primeiro clique ao abrir
+  if (!isVisible && firstClick) {
+    tabsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
+    firstClick = false;
+  }
+});
 
+// Scroll automático para facilitar a visualização do botão ao iniciar o site
+window.addEventListener("load", () => {
+  toggleBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+});
+  
   
