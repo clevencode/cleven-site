@@ -33,7 +33,7 @@ h1 {
   align-items: center;
   min-height: 100vh;
   padding: 4rem 1.5rem 2rem;
-  background: linear-gradient(180deg, #ffffff00 0%, #000000cc 90%),
+  background: radial-gradient(circle, #d5141400 0%, #000000cc 90%),
               url('https://cleven.notion.site/image/attachment%3A9474ccdf-265b-45b0-86be-99f627d94233%3Ae.png?table=block&id=1fb03af9-2e96-80a8-b5c4-f0cffc10b969&spaceId=8c5d2969-d632-4e91-b6ab-e3b0c46cfe31&width=1420&userId=&cache=v2') no-repeat center center / cover;
   text-align: center;
 }
@@ -125,7 +125,7 @@ background-color: #ffffff;
   padding: 1.5rem;
   width: 90%;
   max-width: 800px;
-  background: #00000082;
+  background: radial-gradient(circle, hsla(0, 0%, 18%, 0.51), #00000082);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   border: 1.8px solid #ffffff4d;
@@ -195,9 +195,8 @@ background-color: #ffffff;
 /* ============== TOGGLE LINE ============== */
 .tabs-toggle {
   position: relative;
-  max-width: auto;
   width: 100%;
-  margin: -1.1rem auto 2rem;
+  margin: -1.15rem auto 2rem;
   height: 2.5rem;
 }
 
@@ -207,9 +206,9 @@ background-color: #ffffff;
   left: 0;
   width: 100%;
   height: 3px;
-  background: #ffffff33;
-  border: none;
+  background: linear-gradient(90deg, transparent, #ffffff55, transparent);
   transform: translateY(-50%);
+  border: none;
 }
 
 #toggleTabsBtn {
@@ -217,11 +216,11 @@ background-color: #ffffff;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #000;
-  border: 2px solid #ffffff55;
-  color: #ffffffcc;
-  font-size: 1.5rem;
-  font-weight: bold;
+  background: #111;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
   border-radius: 50%;
   width: 2.5rem;
   height: 2.5rem;
@@ -230,8 +229,9 @@ background-color: #ffffff;
 }
 
 #toggleTabsBtn:hover {
-  color: #ffffff;
-  border-color: #ffffff;
+  color: #fff;
+  border-color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
 }
 
 /* ============== MEDIA QUERIES ============== */
@@ -283,6 +283,6 @@ background-color: #ffffff;
 
 /* ============== OUTROS ESTILOS ============== */
 a{
-  color: #6c2dff;
+  color: hsl(258, 100%, 50%);
   font-weight: 700;
 }
