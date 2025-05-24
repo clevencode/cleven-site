@@ -1,20 +1,26 @@
-
-## Objetivo
-
-Este site tem como objetivo:
-
-- Fortalecer minha presença digital
-- Centralizar minhas informações profissionais
-- Servir como base para futuras atualizações e experimentos
-
-## IA envolvida
-
-Este projeto foi desenvolvido com suporte de ferramentas de inteligência artificial para acelerar a criação de conteúdo, design e estrutura de código, mantendo foco na personalização.
-
-## Contato
-
-Caso queira entrar em contato comigo, acesse a aba "Contato" no site ou envie um e-mail para: [seuemail@exemplo.com](mailto:seuemail@exemplo.com)
+Bem-vindo(a) ao meu website pessoal — uma vitrine digital criada com o apoio de inteligência artificial para apresentar quem sou, o que faço e como você pode me encontrar.
 
 ---
 
-Projeto em constante evolução. Feedbacks são bem-vindos!
+## Este site tem como objetivo:
+
+- Compartilhar minha trajetória profissional
+- Apresentar projetos e habilidades
+- Facilitar o contato direto comigo
+
+---
+
+## Tecnologias Utilizadas
+
+- HTML5 & CSS3
+- JavaScript
+- Suporte de IA para estruturação e conteúdo
+- Hospedagem via Vercel 
+
+---
+
+## Acesse o Site
+[meusite.com](https://meu-site-brown.vercel.app)
+
+
+
