@@ -28,7 +28,7 @@ h1 {
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('images/e.png');
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('https://github.com/clevencode/cleven-site/blob/main/e.png?raw=true');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -218,7 +218,7 @@ h1 {
 .project-card {
   flex: 0 0 80%;
   scroll-snap-align: start;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('images/e.png');
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://github.com/clevencode/cleven-site/blob/main/e.png?raw=true');
   background-size: cover;
   background-position: center;
   border-radius: 1.5rem;
