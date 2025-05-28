@@ -9,4 +9,4 @@ Bem-vindo(a) ao meu website pessoal — uma vitrine digital criada com o apoio d
 - Suporte de IA para estruturação e conteúdo
 - Hospedagem via Vercel 
 ## Acesse o Site
-[meusite.com](https://meu-site-brown.vercel.app)
+[site](https://meu-site-brown.vercel.app)
