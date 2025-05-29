@@ -17,18 +17,21 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+/* ============== TIPOGRAFIA ============== */
 h1 {
-  margin-bottom: 1.5rem;
-  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 
+/* ============== HERO ============== */
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1rem;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)), url('https://github.com/clevencode/cleven-site/blob/main/e.png?raw=true');
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9)),
+              url('https://github.com/clevencode/cleven-site/blob/main/e.png?raw=true');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -44,7 +47,7 @@ h1 {
   width: 100%;
 }
 
-/* ============== GENÉRICOS ============== */
+/* ============== BOTÕES & LINKS ============== */
 .btn,
 .social-links li a {
   display: inline-flex;
@@ -66,6 +69,9 @@ h1 {
   color: #fff;
   background: #333;
   border-color: #fcfaff;
+  transform: scale(1.05);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.05);
 }
 
 /* ============== CONTAINER DE CONTATO ============== */
@@ -91,9 +97,8 @@ h1 {
   padding: 2rem;
   width: 90%;
   max-width: 720px;
-  backdrop-filter: blur(50px);
   border-radius: 30px;
-  border: 2px solid hsl(0, 0%, 30%);
+  border: 2.3px solid hsl(0, 0%, 30%);
   position: relative;
   z-index: 2;
 }
@@ -145,7 +150,7 @@ h1 {
   border-radius: 2px;
 }
 
-/* ============== TOGGLE LINE ============== */
+/* Toggle line para os Tabs */
 .tabs-toggle {
   position: relative;
   width: 100%;
@@ -158,7 +163,7 @@ h1 {
   top: 50%;
   left: 0;
   width: 100%;
-  height: 3px;
+  height: 2.5px;
   background: hsl(0, 0%, 40%);
   transform: translateY(-50%);
   border: none;
@@ -170,7 +175,7 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #111;
-  border: 2px solid rgba(255, 255, 255, 0.6);
+  border: 2.3px solid hsl(0, 0%, 40%);
   color: #fff;
   font-size: 1.3rem;
   font-weight: 700;
@@ -185,7 +190,7 @@ h1 {
   box-shadow: 0 0px 500px rgb(255, 255, 255);
 }
 
-/* ============== TAB CONTENT ============== */
+/* ============== CONTEÚDO DOS TABS ============== */
 .tab-content {
   display: none;
   margin-top: 1.5rem;
@@ -198,9 +203,8 @@ h1 {
   display: block;
 }
 
-/* ============== PROJECT CARDS ============== */
-
-/* ===== CAROUSEL ===== */
+/* ============== PROJECT CARDS & CAROUSEL ============== */
+/* Carousel Container */
 .project-carousel {
   display: flex;
   overflow-x: auto;
@@ -214,33 +218,49 @@ h1 {
   display: none;
 }
 
-/* ===== CARD ===== */
+/* Card */
 .project-card {
   flex: 0 0 80%;
   scroll-snap-align: start;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('https://github.com/clevencode/cleven-site/blob/main/e.png?raw=true');
-  background-size: cover;
-  background-position: center;
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-  border: 2px solid hsl(0, 0%, 30%);
-  background-color: rgba(0, 0, 0, 0.5); /* fundo semi-transparente */
+  border: 2px solid #444;
+  border-radius: 30px;
+  background: transparent;
   color: #fff;
   text-align: left;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-  line-height: 1.6;
-  cursor: pointer; /* visual feedback de interatividade */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  line-height: 1.5;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Hover com mais clareza */
+.project-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: background 0.3s ease;
+  z-index: 0;
+}
+
 .project-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 10px 10px rgba(255, 255, 255, 0.03);
 }
 
-/* Elementos internos (se houver) */
+.project-card:hover::after {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Elementos internos da card */
+.project-card * {
+  position: relative;
+  z-index: 1;
+}
+
 .project-card h3 {
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
@@ -251,29 +271,21 @@ h1 {
   opacity: 0.9;
 }
 
-/* Adaptável para telas menores */
-@media (max-width: 600px) {
-  .project-card {
-    flex: 0 0 95%;
-    padding: 1.2rem;
-    font-size: 0.95rem;
-  }
-}
-
 .project-divider {
   margin: 0.8rem 0;
   border-radius: 30px;
   border: 1.5px solid hsl(0, 0%, 30%);
 }
 
-/* ============== RESPONSIVO CAROUSEL ============== */
-@media (min-width: 1024px) {
+/* ============== MEDIA QUERIES ============== */
+@media (max-width: 1920px) {
   .project-card {
-    flex: 0 0 33.33%;
+    flex: 0 0 95%;
+    padding: 1rem;
+    font-size: 0.95rem;
   }
 }
 
-/* ============== MEDIA QUERIES ============== */
 @media (min-width: 600px) {
   .social-links {
     justify-content: center;
@@ -313,6 +325,12 @@ h1 {
 
   .tab.active {
     font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .project-card {
+    flex: 0 0 33.33%;
   }
 }
 

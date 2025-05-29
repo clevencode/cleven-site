@@ -9,87 +9,88 @@
 </head>
 <body>
   <!-- ===================== Seção Home ===================== -->
+  <!-- Seção principal com informações do título e descrição -->
   <section class="hero">
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1>SOU CLEVENIDER PETIT</h1>
-<p>Estudante de Análise e Desenvolvimento de Sistemas, com foco em <strong>front-end development</strong></p>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>CLEVENIDER PETIT</h1>
+        <p>Estudante de Análise e Desenvolvimento de Sistemas, com foco em <strong>front-end development</strong></p>
+      </div>
     </div>
-  </div>
-</section>
-
-
-<!-- ===================== Seção Sobre ===================== -->
-<!-- Toggle Tabs Section -->
-<div class="tabs-toggle">
-  <hr class="toggle-line" />
-  <button id="toggleTabsBtn">
-    <span id="toggleIcon">+</span>
-  </button>
-</div>
-
-
-<div class="tabs-container">
-  <div class="tabs">
-    <button class="tab active" data-tab="home">Home</button>
-    <button class="tab" data-tab="about">Sobre</button>
-    <button class="tab" data-tab="projects">Projetos</button>
-    <button class="tab" data-tab="contact">Contato</button>
-     <button class="tab" data-tab="social">Social</button>
-  </div>
-
-  <div class="tab-content active" id="home">
-    <p><strong>Prazer em te conhecer!</strong> Aqui você encontrará atualizações sobre mim, minhas experiências e habilidades.</p>
-
-  </div>
-  
-  <div class="tab-content" id="about">
-    <p>
-  Estou cursando Análise e Desenvolvimento de Sistemas pela 
-  <a href="https://descomplica.com.br/faculdade/tecnologia/analise-e-desenvolvimento-de-sistemas/" target="_blank">
-    Faculdade Descomplica Digital
-  </a>. 
-  Curto ver código virando solução e esse curso está me guiando no lugar certo.
-</p>
-
-  </div>
-  
-  <div class="tab-content" id="projects">
-    <p>Não tenho projetos complexos em andamento ainda, mas este site já representa um pouco do que já aprendi.</p>
-   <section class="project-carousel">
-  <article class="project-card">
-    <h3>Site Pessoal</h3>
-    <p>Meu primeiro projeto desenvolvendo um site pessoal. O projeto foi desenvolvido em HTML, CSS e JavaScript.</p>
-    <hr class="project-divider"/>
-    <a href="https://github.com/clevencode/cleven-site">Ver mais no GitHub</a>
-  </article>
   </section>
-  </div>
-  
 
-  <div class="tab-content" id="contact">
-   <p>Fico mais disponível aos fins de semana, é o melhor momento para entrar em contato comigo.</p>
-    <div class="common-contact">
-      <a href="mailto:clevypetit@gmail.com" class="btn">Enviar Mensagem</a>
+  <!-- ===================== Seção de Alternância de Abas ===================== -->
+  <!-- Botão para alternar exibição das abas -->
+  <div class="tabs-toggle">
+    <hr class="toggle-line" />
+    <button id="toggleTabsBtn">
+      <span id="toggleIcon">+</span>
+    </button>
+  </div>
+
+  <!-- ===================== Seção de Abas ===================== -->
+  <div class="tabs-container">
+    <!-- Abas de navegação -->
+    <div class="tabs">
+      <button class="tab active" data-tab="home">Olá</button>
+      <button class="tab" data-tab="about">Eu</button>
+      <button class="tab" data-tab="projects">Projetos</button>
+      <button class="tab" data-tab="contact">Contato</button>
+      <button class="tab" data-tab="social">Social</button>
+    </div>
+
+    <!-- Conteúdo da aba "Olá" -->
+    <div class="tab-content active" id="home">
+      <p><strong>Prazer em te conhecer!</strong> Encontre informações sobre mim, minhas experiências, habilidades e contato.</p>
+    </div>
+    
+    <!-- Conteúdo da aba "Eu" -->
+    <div class="tab-content" id="about">
+      <p>
+        <strong>Estudo</strong> Análise e Desenvolvimento de Sistemas na 
+        <a href="https://descomplica.com.br/faculdade/tecnologia/analise-e-desenvolvimento-de-sistemas/" target="_blank">Descomplica Digital</a>.
+        <br>
+        Prefiro design limpo e interfaces funcionais. A <strong>Apple</strong> é minha inspiração!
+      </p>
+    </div>
+
+    <!-- Conteúdo da aba "Projetos" -->
+    <div class="tab-content" id="projects">
+      <p><strong>Confira</strong> meus projetos abaixo e acesse mais no GitHub.</p>
+      <!-- Carrossel de projetos -->
+      <section class="project-carousel">
+        <article class="project-card">
+          <h3>Site Pessoal</h3>
+          <p>Meu primeiro site em HTML, CSS e JavaScript.</p>
+          <hr class="project-divider" />
+          <a href="https://github.com/clevencode/cleven-site">Ver no GitHub</a>
+        </article>
+      </section>
+    </div>
+    
+    <!-- Conteúdo da aba "Contato" -->
+    <div class="tab-content" id="contact">
+      <p><strong>De preferência,</strong> envie mensagens aos fins de semana.</p>
+      <div class="common-contact">
+        <a href="mailto:clevypetit@gmail.com" class="btn">Enviar Mensagem</a>
+      </div>
+    </div>
+    
+    <!-- Conteúdo da aba "Social" -->
+    <div class="tab-content" id="social">
+      <p><strong>Encontre-me</strong> nas redes sociais abaixo</p>
+      <ul class="social-links">
+        <li>
+          <a href="https://github.com/Clevencode" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/clevenider-petit-31a77a282/" target="_blank">
+            <i class="fab fa-linkedin-in"></i> LinkedIn
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
-  
-  <div class="tab-content" id="social">
-    <p>Se você quiser saber um pouco mais sobre mim nas redes sociais, aproveite clicando nos botões abaixo.</p>
-    <ul class="social-links">
-      <li>
-        <a href="https://github.com/Clevencode" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-      </li>
-      <li>
-        <a href="https://www.linkedin.com/in/clevenider-petit-31a77a282/" target="_blank">
-          <i class="fab fa-linkedin-in"></i> LinkedIn
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
 </body>
-</html>
-
