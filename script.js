@@ -45,7 +45,7 @@ toggleBtn.addEventListener("click", () => {
   
   // Toggle display and icon
   tabsContainer.style.display = isVisible ? "none" : "block";
-  toggleIcon.textContent = isVisible ? "＋" : "－";
+  toggleIcon.textContent = isVisible ? "mais" : "menos";
   
   // Scroll automatic ao primeiro clique ao abrir
   if (!isVisible && firstClick) {

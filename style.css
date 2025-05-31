@@ -175,13 +175,12 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #111;
-  border: 2.3px solid hsl(0, 0%, 40%);
+  border: 2.9px solid hsl(0, 0%, 40%);
+  padding: 0rem 0.9rem;
+  border-radius: 30px;
   color: #fff;
   font-size: 1.3rem;
-  font-weight: 700;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
+  font-weight: 600;
   cursor: pointer;
 }
 
@@ -275,6 +274,37 @@ h1 {
   margin: 0.8rem 0;
   border-radius: 30px;
   border: 1.5px solid hsl(0, 0%, 30%);
+}
+
+/* Botão */
+#toggleDetailsBtn {
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color: hsl(210, 100%, 50%);
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+#toggleDetailsBtn:hover {
+  background-color: hsl(210, 100%, 40%);
+}
+
+/* Seção escondida por padrão */
+.extra-details {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  overflow: hidden;
+}
+
+/* Classe que esconde */
+tab-container.hidden {
+  display: hidden;
 }
 
 /* ============== MEDIA QUERIES ============== */
