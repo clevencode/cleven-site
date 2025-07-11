@@ -32,28 +32,6 @@ tabs.forEach(tab => {
   });
 });
 
-const toggleBtn = document.getElementById("toggleTabsBtn");
-const toggleIcon = document.getElementById("toggleIcon");
-const tabsContainer = document.querySelector(".tabs-container");
-
-// Começa escondido
-tabsContainer.style.display = "none";
-let firstClick = true;
-
-toggleBtn.addEventListener("click", () => {
-  const isVisible = tabsContainer.style.display === "block";
-  
-  // Toggle display and icon
-  tabsContainer.style.display = isVisible ? "none" : "block";
-  toggleIcon.textContent = isVisible ? "mais" : "menos";
-  
-  // Scroll automatic ao primeiro clique ao abrir
-  if (!isVisible && firstClick) {
-    tabsContainer.scrollIntoView({ behavior: "smooth", block: "start" });
-    firstClick = false;
-  }
-});
-
 // Scroll automático para facilitar a visualização do botão ao iniciar o site
 window.addEventListener("load", () => {
   toggleBtn.scrollIntoView({ behavior: "smooth", block: "center" });
