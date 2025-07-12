@@ -19,7 +19,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 // -------------------------------
 // Tabs: mostra o conteúdo correspondente
 // -------------------------------
-const tabs = document.querySelectorAll('.tab');
+const tabs = document.querySelectorAll('.btn');
 const contents = document.querySelectorAll('.tab-content');
 
 tabs.forEach(tab => {

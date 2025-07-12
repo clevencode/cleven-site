@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background: radial-gradient(#c1c1c1 50%, #ffffff 100%);
-  color: #fff;
+  background: radial-gradient(#ffffff, #ffffff );
+  color: #ffffff;
   scrollbar-width: none;
 }
 
@@ -22,40 +22,41 @@ h1 {
   font-size: 2rem;
 }
 
+a {
+  color: #fcfaff;
+  font-weight: 700;
+}
+
+/* ============== HERO SECTION ============== */
 .hero {
- display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   padding: 1.5rem;
- background: radial-gradient(ellipse at center, #333333 0%, #303030 100%);
-  box-shadow: 
-               5px 5px 10px hsl(0, 0%, 50%),
-              -5px -5px 10px rgb(255, 255, 255);
-border-bottom: hsl(0, 0%, 30%) 1px solid;
-border-radius: 0 100px 100px 0px;
-margin-top:  1.5rem;
-margin-right: 1.5rem;
-width: 95%;
+  background: linear-gradient(0deg, #777777, #acacac);
+  box-shadow:
+  0 0 50px rgba(0, 0, 0, 0.5),
+  inset 0 0 20px rgba(255, 255, 255, 0.1);
+  border-bottom: solid 1px hsl(0, 0%, 70%);
 }
 
 .hero-content {
-text-align: left;
-  max-width: 600px;  /* Ajuste a largura máxima do texto */
+  text-align: center;
+  max-width: 600px;
   width: 100%;
-  margin-right: 2rem; /* Espaçamento entre a imagem e o texto */
+  margin-right: 2rem;
 }
 
-
-
 /* ============== BOTÕES & LINKS ============== */
-.btn, 
+.btn, .git-btn,
 .social-links li a {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #888888;
-  background: #2c2c2c;
+  color: #868686;
+   background: linear-gradient(0deg, #444343 0%, #303030 100%);
   padding: 0.6rem 1.5rem;
+  border: 1px solid hsl(0, 0%, 50%);
   border: none;
   border-radius: 30px;
   font-weight: 500;
@@ -66,60 +67,54 @@ text-align: left;
   box-shadow:
     4px 4px 10px rgba(0, 0, 0, 0.6),
     -4px -4px 10px rgba(255, 255, 255, 0.03);
-  border: hsl(0, 0%, 20%) 1px solid;
+     border: 1px solid hsl(0, 0%, 25%);
 }
 
-.btn:hover, 
-.social-links li a:hover {
-  color: #ffffff;
-  background: #2c2c2c;
-  box-shadow:
-    inset 4px 4px 4px rgba(0, 0, 0, 0.5),
-    inset -4px -4px 4px rgba(255, 255, 255, 0.03);
-  transform: scale(1.02);
+
+.btn:hover,
+.social-links li a:hover,
+.git-btn:hover {
+  color: #e6e5e5;
+  cursor: pointer;
 }
+
+
+
 
 .btn:active,
 .social-links li a:active {
   box-shadow:
     inset 2px 2px 4px #bebebe,
-    inset -2px -2px 4px #ffffff;
+    inset -2px -2px 4px #fff;
   transform: scale(0.98);
+   box-shadow:
+    inset 4px 4px 4px rgba(0, 0, 0, 0.6),
+    inset -4px -4px 4px rgba(255, 254, 254, 0.2);
+  cursor: pointer;
+  transform: scale(1.05);
 }
 
-/* ============== CONTAINER DE CONTATO ============== */
-.common-contact {
+/* ============== CONTATO E LINKS SOCIAIS ============== */
+.common-contact,
+.social-links, 
+.git-btn {
   display: flex;
-  justify-content: center; /* alinhado à direita */
+  justify-content: center;
   gap: 0.8rem;
   margin-top: 1.5rem;
-  list-style: none;
-  flex-wrap: wrap; /* permite quebrar linha em telas menores */
-}
-
-/* ============== SOCIAL LINKS ============== */
-.social-links {
-  display: flex;
-  justify-content: flex-end; /* alinhado à direita */
-  gap: 0.8rem;
-  margin-top: 1.5rem;
+  flex-wrap: wrap;
   list-style: none;
   padding: 0;
-  flex-wrap: wrap; /* permite quebrar linha em telas menores */
 }
 
-/* ============== RESPONSIVO: GRID EM TELAS PEQUENAS ============== */
-@media (max-width: 600px) {
-  .common-contact,
-  .social-links {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    justify-items: center;
-    gap: 1rem;
-  }
+.btn:hover, .git-btn:hover, .social-links li a:hover {
+  background: linear-gradient(0deg, #4a4a4a 0%, #3a3a3a 100%);
+  transform: scale(1.05);
 }
 
-
+.btn:active, .git-btn:active, .social-links li a:active {
+  transform: scale(0.95);
+}
 /* ============== TABS ============== */
 .tabs-container {
   margin: 3rem auto;
@@ -127,29 +122,24 @@ text-align: left;
   width: 90%;
   max-width: 720px;
   border-radius: 20px;
-  position: relative;
-background: radial-gradient(ellipse at center, #333333 0%, #303030 100%);
-  box-shadow: 
-               5px 5px 10px hsl(0, 0%, 50%),
-              -5px -5px 10px rgb(255, 255, 255);
-border: 1px solid hsl(0, 0%, 50%);
+  background: radial-gradient(ellipse at center, #333333 0%, #303030 100%);
+  box-shadow:
+    5px 5px 10px hsl(0, 0%, 50%),
+    -5px -5px 10px rgb(255, 255, 255);
+  border: 1px solid hsl(0, 0%, 50%);
 }
-
-/* Novo container para a imagem ao lado */
-.tabs-side-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 250px; /* Cresce com limite mínimo */
+.tabs{
+  background: hsl(0, 0%, 15%);
+  border-radius: 30px;
+  border: none;
+  padding: 0.6rem 1rem;
+  border: 1px solid hsl(0, 0%, 20%);
 }
-
-
 
 .tabs {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
-  border-bottom: 2px solid #555;
   scrollbar-width: none;
 }
 
@@ -181,34 +171,63 @@ border: 1px solid hsl(0, 0%, 50%);
   position: relative;
 }
 
-.tab.active::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background-color: #fff;
-  border-radius: 2px;
-}
 
-
-
-/* ============== CONTEÚDO DOS TABS ============== */
+/* ============== CONTEÚDO DAS ABAS ============== */
 .tab-content {
   display: none;
   margin-top: 1.5rem;
   font-size: 1rem;
   color: #eee;
   line-height: 1.8;
+  border-radius: 10px;
+  padding: 1rem;
+  background: hsl(0, 0%, 35%);
 }
 
 .tab-content.active {
   display: block;
 }
 
-/* ============== PROJECT CARDS & CAROUSEL ============== */
-/* Carousel Container */
+/* ============== IMAGEM PERFIL ============== */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* habilita quebra em telas pequenas */
+}
+
+.about-text {
+  flex: 1 1 100px; /* Cresce e diminui conforme necessário */
+  text-align: left;
+}
+
+.about-image {
+  flex: 0 0 auto;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 30px;
+  transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Mobile: imagem abaixo do texto */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+/* ============== PROJETOS (CAROUSEL) ============== */
 .project-carousel {
   display: flex;
   overflow-x: auto;
@@ -222,16 +241,15 @@ border: 1px solid hsl(0, 0%, 50%);
   display: none;
 }
 
-/* Card */
 .project-card {
   flex: 0 0 80%;
   scroll-snap-align: start;
   border: 1.5px solid #444;
   border-radius: 20px;
- box-shadow:
+  background: none;
+  box-shadow:
     4px 4px 10px rgba(0, 0, 0, 0.6),
     -4px -4px 10px rgba(255, 255, 255, 0.03);
-    border:hsl(0, 0%, 20%) 1px solid;
   color: #fff;
   text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -239,25 +257,6 @@ border: 1px solid hsl(0, 0%, 50%);
   cursor: pointer;
   position: relative;
   overflow: hidden;
-}
-
-.project-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  transition: background 0.3s ease;
-  z-index: 0;
-}
-
-
-/* Elementos internos da card */
-.project-card * {
-  position: relative;
-  z-index: 1;
 }
 
 .project-card h3 {
@@ -276,63 +275,27 @@ border: 1px solid hsl(0, 0%, 50%);
   border: 1px solid hsl(0, 0%, 30%);
 }
 
-/* Botão */
-#toggleDetailsBtn {
-  margin-top: 1rem;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  background-color: hsl(210, 100%, 50%);
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-#toggleDetailsBtn:hover {
-  background-color: hsl(210, 100%, 40%);
-}
-
-/* Seção escondida por padrão */
-.extra-details {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px solid #ccc;
-  transition: max-height 0.3s ease, opacity 0.3s ease;
-  overflow: hidden;
-}
-
-/* Classe que esconde */
-.tab-container.hidden {
-  display: none;
-}
-
-
 /* ============== MEDIA QUERIES ============== */
-@media (max-width: 1920px) {
-  .project-card {
-    flex: 0 0 95%;
-    padding: 1rem;
-    font-size: 0.95rem;
+@media (max-width: 600px) {
+  .common-contact,
+  .social-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-items: center;
+    gap: 1rem;
   }
 }
 
 @media (min-width: 600px) {
-  .social-links {
-    justify-content: center;
-    gap: 1rem;
-  }
-
-  .social-links li a {
-    font-size: 0.95rem;
-  }
-
   .hero-text h1 {
     font-size: 2.6rem;
   }
-
   .hero-text p {
     font-size: 1.25rem;
+  }
+  .social-links {
+    justify-content: center;
+    gap: 1rem;
   }
 }
 
@@ -340,20 +303,13 @@ border: 1px solid hsl(0, 0%, 50%);
   .tabs-container {
     margin: 3rem auto;
     padding: 2rem;
-    position: relative;
-    transform: none;
-    left: auto;
-    bottom: auto;
   }
-
   .tabs {
     gap: 1rem;
   }
-
   .tab {
     font-size: 1.6rem;
   }
-
   .tab.active {
     font-size: 1.7rem;
   }
@@ -365,9 +321,10 @@ border: 1px solid hsl(0, 0%, 50%);
   }
 }
 
-/* ============== OUTROS ESTILOS ============== */
-a {
-  color: #fcfaff;
-  font-weight: 700;
+@media (max-width: 1920px) {
+  .project-card {
+    flex: 0 0 95%;
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
 }
-
